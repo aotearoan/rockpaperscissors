@@ -156,7 +156,7 @@ public class CLIClient implements Client {
 
 	private Integer validateOption(String input, int min, int max) {
 		Integer option = integerValidator.validate(input);
-		if (option != null && (option < min && option > max)) {
+		if (option != null && (option < min || option > max)) {
 			option = null;
 		}
 		return option;
